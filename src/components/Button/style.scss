@@ -1,0 +1,35 @@
+.buttonComponent {
+  padding: 7px 25px;
+  border-radius: 14px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 149.9%;
+  white-space: nowrap;
+  text-align: center;
+  background: transparent;
+  border: none;
+  outline: 0;
+  // user-select: none;
+  cursor: pointer;
+
+  &.btn-default {
+    color: var(--text-white);
+    &.btn-primary {
+      background: var(--bg-primary);
+    }
+
+    &.btn-orange {
+      background: linear-gradient(90deg, #ffa67a 0%, #ff6065 100%);
+    }
+  }
+
+  &.btn-outline {
+    background: var(--bg-white);
+
+    &.btn-primary {
+      color: var(--bg-primary);
+      border: 2px solid var(--bg-primary);
+    }
+  }
+}
