@@ -1,13 +1,22 @@
-import { Label, Button, Space } from "components";
+import { Label, Button, Space, Fields } from "components";
 import { ReactComponent as CupIcon } from "assets/images/icons/cup.svg";
 import { ReactComponent as StarIcon } from "assets/images/icons/star.svg";
 import styles from "./home.module.scss";
-import { useNavigate } from "react-router-dom";
+
+const difficulty = [
+  { value: 1, label: "Easy" },
+  { value: 2, label: "Medium" },
+  { value: 3, label: "Hard" },
+];
 
 const HomeForm = () => {
-  const navigate = useNavigate();
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    console.log(event);
+  };
+
   return (
-    <div className={styles.homeForm}>
+    <form className={styles.homeForm} onSubmit={handleSubmit}>
       <Label
         name={
           <div className={styles.formLabel}>
@@ -16,8 +25,13 @@ const HomeForm = () => {
           </div>
         }
       >
-        SelectComponent
+        <Fields.Select
+          name="difficulty"
+          options={difficulty}
+          placeholder="Select a difficulty"
+        />
       </Label>
+      <Space mt={25} />
       <Label
         name={
           <div className={styles.formLabel}>
@@ -26,15 +40,17 @@ const HomeForm = () => {
           </div>
         }
       >
-        NumberComponent
+        <Fields.Amount name="amount" placeholder="Enter amount of questions" />
       </Label>
-      <Space mt={10} />
+      <Space mt={60} />
       <Button
+        htmlType="submit"
         name="Let's go"
         variant="orange"
-        onClick={() => navigate("/home")}
+        fullWidth
+        hoverEffect
       />
-    </div>
+    </form>
   );
 };
 
