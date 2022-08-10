@@ -1,0 +1,17 @@
+.pageWrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.quizTitle,
+.quizLevel,
+.quizQuestion {
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.quizFormBtns {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
