@@ -1,0 +1,30 @@
+$bg: (
+  primary: #4751c0,
+  primary2: #424a9e,
+  secondary-dark: #c65252,
+  secondary: #ff7c7c,
+  secondary-light: #ffdbdb,
+  white: #fff,
+  black: #000,
+) !default;
+
+$text: (
+  primary: #4953be,
+  primary2: #464fac,
+  secondary: #ff7878,
+  white: #fff,
+  black: #000,
+) !default;
+
+:root {
+  /* light theme colors */
+  @each $key, $value in $bg {
+    --bg-#{""+$key}: #{$value};
+  }
+
+  @each $key, $value in $text {
+    --text-#{""+$key}: #{$value};
+  }
+
+  --font-family: "Quicksand", sans-serif;
+}

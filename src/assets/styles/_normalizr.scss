@@ -1,0 +1,123 @@
+$margin-size: 0.25rem;
+$padding-size: 0.25rem;
+
+.w-100 {
+  width: 100%;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+// ----------- margin-left values ------------
+.ml-0 {
+  margin-left: 0;
+}
+.ml-1 {
+  margin-left: $margin-size * 1;
+}
+.ml-2 {
+  margin-left: $margin-size * 2;
+}
+.ml-3 {
+  margin-left: $margin-size * 3;
+}
+.ml-4 {
+  margin-left: $margin-size * 4;
+}
+.ml-5 {
+  margin-left: $margin-size * 5;
+}
+.ml-6 {
+  margin-left: $margin-size * 6;
+}
+.ml-7 {
+  margin-left: $margin-size * 7;
+}
+.ml-8 {
+  margin-left: $margin-size * 8;
+}
+.ml-9 {
+  margin-left: $margin-size * 9;
+}
+.ml-10 {
+  margin-left: $margin-size * 10;
+}
+
+.ml-15 {
+  margin-left: $margin-size * 15;
+}
+.ml-20 {
+  margin-left: $margin-size * 20;
+}
+.ml-30 {
+  margin-left: $margin-size * 30;
+}
+
+// ----------- margin-right values ------------
+.mr-0 {
+  margin-right: 0;
+}
+.mr-1 {
+  margin-right: $margin-size * 1;
+}
+.mr-2 {
+  margin-right: $margin-size * 2;
+}
+.mr-3 {
+  margin-right: $margin-size * 3;
+}
+.mr-4 {
+  margin-right: $margin-size * 4;
+}
+.mr-5 {
+  margin-right: $margin-size * 5;
+}
+.mr-6 {
+  margin-right: $margin-size * 6;
+}
+.mr-7 {
+  margin-right: $margin-size * 7;
+}
+.mr-8 {
+  margin-right: $margin-size * 8;
+}
+.mr-9 {
+  margin-right: $margin-size * 9;
+}
+.mr-10 {
+  margin-right: $margin-size * 10;
+}
+
+.mr-15 {
+  margin-right: $margin-size * 15;
+}
+.mr-20 {
+  margin-right: $margin-size * 20;
+}
+.mr-30 {
+  margin-right: $margin-size * 30;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
