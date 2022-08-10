@@ -1,5 +1,5 @@
 .buttonComponent {
-  padding: 7px 25px;
+  padding: 13px 25px;
   border-radius: 14px;
   font-family: var(--font-family);
   font-weight: 700;
@@ -12,6 +12,17 @@
   outline: 0;
   // user-select: none;
   cursor: pointer;
+
+  &.hoverEffect {
+    &:hover,
+    &:focus {
+      transform: scale(1.03);
+    }
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
 
   &.btn-default {
     color: var(--text-white);
