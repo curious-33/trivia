@@ -1,35 +1,41 @@
-import { useRef } from "react";
-import styles from "./amount.module.scss";
+import React, { useState } from "react";
+import cx from "classnames";
+import "./style.scss";
 
 interface IAmountComponent {
   name: string;
   onChange?: Function;
   placeholder?: string;
-  error?: null;
+  errors?: any;
+  [x: string]: any;
 }
 
 const AmountComponent: React.FC<IAmountComponent> = ({
   name,
   placeholder,
   onChange,
-  error,
+  errors,
+  ...otherProps
 }): JSX.Element => {
-  const amountRef = useRef<HTMLInputElement | null>(null);
+  const [amountValue, setAmountValue] = useState<string>("");
   return (
-    <div className={styles.amountComponent}>
+    <div className="amountComponent">
       <input
         type="number"
         name={name}
         placeholder={placeholder}
-        className={styles.amount}
-        onChange={() => {
-          if (amountRef.current && onChange) {
-            onChange(amountRef.current.value);
+        className={cx("amount", errors && errors[name] ? "hasError" : "")}
+        value={amountValue}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          setAmountValue(e.target.value);
+          if (onChange) {
+            onChange(e.target.value);
           }
         }}
+        {...otherProps}
       />
-      {error && error[name] && (
-        <div className={styles.amountError}>{error[name]["message"]}</div>
+      {errors && errors[name] && (
+        <div className="errorMessage">{errors[name]["message"]}</div>
       )}
     </div>
   );

@@ -1,0 +1,37 @@
+.amountComponent {
+  width: 100%;
+  position: relative;
+
+  .amount {
+    width: 100%;
+    height: 45px;
+    padding: 0 10px;
+    color: var(--text-white);
+    background-color: var(--bg-primary);
+    border: 1px solid var(--bg-white);
+    box-shadow: 6px 6px 13px -1px rgba(23, 21, 92, 0.06);
+    border-radius: 10px;
+    outline: none;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    &::placeholder {
+      color: var(--text-placeholder);
+    }
+
+    &.hasError {
+      border: 1px solid var(--text-danger);
+    }
+  }
+
+  .errorMessage {
+    color: var(--text-danger);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    font-size: 13px;
+  }
+}

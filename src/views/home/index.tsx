@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Layout from "layout";
 import { Button } from "components";
 import Form from "./form";
-import Logo from "assets/images/logo.svg";
+import Logo from "./logo";
 import styles from "./home.module.scss";
 
 const HomeView = () => {
@@ -11,9 +11,7 @@ const HomeView = () => {
   return (
     <Layout.Container>
       <div className={styles.pageWrapper}>
-        <div className={styles.appLogoWrapper}>
-          <img src={Logo} alt="app-logo" className={styles.appLogo} />
-        </div>
+        <Logo />
         <Form />
         <Button
           name="Previous page"
