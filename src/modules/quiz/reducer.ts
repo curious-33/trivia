@@ -16,6 +16,7 @@ const quizReducerHandler = {
     ...state,
     data: payload,
     isLoading: false,
+    result: [],
   }),
   [setUserAnswer.REQUEST]: (
     state: IStore.InitialState,
