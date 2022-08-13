@@ -1,6 +1,10 @@
 .progressBarComponent {
   width: 60%;
   margin: 0 auto;
+
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
 }
 
 .progressText {
@@ -15,6 +19,30 @@
     line-height: 35px;
     color: var(--text-secondary);
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+
+    span {
+      font-size: 22px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+
+    span {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 14px;
+
+    span {
+      font-size: 18px;
+    }
+  }
 }
 
 .progress {
@@ -24,10 +52,14 @@
   border-radius: 20px;
   margin-top: 10px;
   position: relative;
+  @media screen and (max-width: 450px) {
+    margin-top: 0;
+  }
 }
 
 .progressCompleted {
   height: 100%;
+  max-width: 100%;
   background: linear-gradient(180deg, #ff7878 0%, #ff7878 100%);
   border-radius: 20px;
   position: absolute;

@@ -58,6 +58,7 @@ const QuizView = () => {
               fullWidth
               onClick={() => handleAnswer("False")}
             />
+            <Space mt={60} />
           </div>
         </div>
       </div>

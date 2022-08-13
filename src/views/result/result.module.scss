@@ -2,6 +2,10 @@
   width: 80%;
   margin: 0 auto;
   position: relative;
+
+  @media screen and (max-width: 450px) {
+    width: 90%;
+  }
 }
 
 .closeBtn {
@@ -16,6 +20,28 @@
       fill: var(--text-white);
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    top: -1rem;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
 }
 
 .resultHeader {
@@ -23,6 +49,10 @@
   align-items: center;
   justify-content: center;
   margin: 5rem 0 3rem;
+
+  @media screen and (max-width: 450px) {
+    margin: 5rem 0 1rem;
+  }
 }
 
 .resultHeaderTop {
@@ -36,6 +66,28 @@
   border-radius: 50%;
   background: var(--bg-light);
   margin-right: 2rem;
+
+  @media screen and (max-width: 768px) {
+    width: 46px;
+    height: 46px;
+    margin-right: 2rem;
+
+    svg {
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 40px;
+    height: 40px;
+    margin-right: 1.5rem;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
 
 .scoreText {
@@ -44,6 +96,14 @@
   line-height: 23px;
   color: var(--text-white);
   user-select: none;
+
+  @media screen and (max-width: 768px) {
+    font-size: 19px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 17px;
+  }
 }
 
 .correctAnswerAmount {
@@ -51,6 +111,11 @@
   font-size: 28px;
   line-height: 35px;
   color: var(--text-secondary);
+  margin-left: 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 25px;
+  }
 }
 
 .resultHeaderBottom {
@@ -65,6 +130,11 @@
   width: 26px;
   width: 26px;
   margin-right: 5px;
+
+  @media screen and (max-width: 450px) {
+    width: 20px;
+    width: 20px;
+  }
 }
 
 .filledStar {
@@ -85,6 +155,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+    padding: 12px 17px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 14px;
+  }
 }
 
 .correct {
@@ -104,6 +183,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 450px) {
+    width: 35px;
+    svg {
+      width: 14px !important;
+      height: 14px !important;
+    }
+  }
 }
 
 .playBtn {
@@ -114,5 +201,9 @@
 
   button {
     width: 60%;
+
+    @media screen and (max-width: 450px) {
+      width: 100%;
+    }
   }
 }

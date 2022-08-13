@@ -1,12 +1,33 @@
 .pageWrapper {
   width: 80%;
-  margin: 15vh auto 0;
+  margin: 0 auto;
 }
 
 .quizTitle {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 60px;
   line-height: 80px;
+  padding-top: 15vh;
+
+  @media screen and (max-width: 1440px) {
+    padding-top: 12vh;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding-top: 10vh;
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding-top: 7vh;
+    font-size: 33px;
+    line-height: 40px;
+  }
 }
 
 .quizTitle,
@@ -16,16 +37,52 @@
   color: var(--text-primary);
 }
 
-.quizLevel{
+.quizLevel {
   margin: 3rem 0;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 116.13%;
+
+  @media screen and (max-width: 768px) {
+    font-size: 25px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 23px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 21px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 16px;
+  }
 }
 
 .quizQuestion {
-  margin: 4rem 0 5rem;
+  margin: 5rem 0 7rem;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 31px;
   line-height: 143.9%;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 28px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 23px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 20px;
+    margin: 5rem 0;
+  }
 }
 
 .quizFormBtns {
@@ -36,5 +93,9 @@
   button {
     width: 60% !important;
     margin: 0 auto;
+
+    @media screen and (max-width: 450px) {
+      width: 100% !important;
+    }
   }
 }

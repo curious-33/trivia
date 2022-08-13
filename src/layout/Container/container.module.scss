@@ -45,12 +45,13 @@
 .pageContainer {
   height: 100%;
   overflow-y: auto;
-  width: 50%;
-  margin: 0 auto;
+  width: 30%;
+  margin: auto;
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
+  bottom: 0;
 
   &::-webkit-scrollbar-track {
     border-radius: 4px;
@@ -68,5 +69,25 @@
   &::-webkit-scrollbar-thumb {
     border-radius: 4px;
     background-color: white;
+  }
+
+  @media screen and (max-width: 1920px) {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 1440px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 100%;
   }
 }
