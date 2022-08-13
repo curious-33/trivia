@@ -29,6 +29,15 @@ const quizReducerHandler = {
       result: newResult,
     };
   },
+  [setUserAnswer.SUCCESS]: (
+    state: IStore.InitialState,
+    payload: IStore.userResult
+  ) => {
+    return {
+      ...state,
+      result: [],
+    };
+  },
 };
 
 export const quizReducer = (

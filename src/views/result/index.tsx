@@ -3,15 +3,17 @@ import { useSelector } from "react-redux";
 import get from "lodash/get";
 
 import Layout from "layout";
-import { Types } from "modules/quiz";
+import { Types, Actions } from "modules/quiz";
 import { IAppState } from "store/rootReducer";
 import { Button } from "components";
 import ResultHeader from "./header";
 import Question from "./question";
 import { ReactComponent as CloseIcon } from "assets/images/icons/incorrect.svg";
 import styles from "./result.module.scss";
+import { useDispatch } from "react-redux";
 
 const ResultView = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const quizResult = useSelector<IAppState>((state) => state.quiz.result);
   const result =
@@ -19,6 +21,7 @@ const ResultView = () => {
 
   const handleClose = () => {
     navigate("/quizzes");
+    dispatch(Actions.setUserAnswer.success([]));
   };
   return (
     <Layout.Container>
