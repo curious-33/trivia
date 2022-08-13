@@ -15,7 +15,6 @@ function validateForm({ values, setErrors }: IForm.Validate) {
   };
   if (values) {
     if (!values.difficulty) {
-      console.log("values.difficulty", values.difficulty);
       validationErrors["difficulty"] = {
         type: "invalid",
         message: "Difficulty must be selected",
@@ -23,7 +22,6 @@ function validateForm({ values, setErrors }: IForm.Validate) {
       };
     }
     if (!values.amount) {
-      console.log("values.amount", values.amount);
       validationErrors["amount"] = {
         type: "invalid",
         message: "Must be greater than 0",

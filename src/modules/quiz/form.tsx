@@ -1,8 +1,15 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+import { helpers } from "utils";
+import { startQuiz } from "./actions";
 import validateForm from "./validation";
 import * as Types from "./types";
 
 const FormModule: React.FC<Types.IForm.Handler> = ({ children }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [values, setValues] = useState<Types.IForm.State>({
     difficulty: "",
     amount: "",
@@ -25,16 +32,32 @@ const FormModule: React.FC<Types.IForm.Handler> = ({ children }) => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (validateForm({ values, setErrors })) {
-      console.log("submit values", values);
+      dispatch(
+        startQuiz.request({
+          values: {
+            type: "boolean",
+            category: 15,
+            amount: values.amount,
+            difficulty: helpers.getQuizDifficulty(
+              values.difficulty ? values.difficulty : ""
+            ),
+          },
+          cb: {
+            onSuccess: (data: unknown) => {
+              navigate("/quizzes/1");
+            },
+            onError: (error: unknown) => {
+              console.log("Something went wrong: \n", error);
+            },
+          },
+        })
+      );
     }
   };
-
-  console.log("values", values);
-  console.log("errors", errors);
 
   return (
     <>

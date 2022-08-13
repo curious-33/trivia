@@ -1,5 +1,10 @@
 import { Suspense, lazy } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 
 const HomeView = lazy(() => import("views/home"));
 const QuizView = lazy(() => import("views/quiz"));
@@ -10,9 +15,10 @@ function App() {
     <Router>
       <Suspense fallback="Loading...">
         <Routes>
-          <Route index element={<HomeView />} />
+          <Route path="/quizzes" element={<HomeView />} />
           <Route path="/quizzes/:id" element={<QuizView />} />
-          <Route path="/result" element={<ResultView />} />
+          <Route path="/quizzes/result" element={<ResultView />} />
+          <Route path="*" element={<Navigate to="/quizzes" replace />} />
         </Routes>
       </Suspense>
     </Router>

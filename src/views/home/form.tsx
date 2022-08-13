@@ -1,4 +1,4 @@
-import { FormHandler } from "modules/home";
+import { FormHandler } from "modules/quiz";
 import { Label, Button, Space, Fields } from "components";
 import { ReactComponent as CupIcon } from "assets/images/icons/cup.svg";
 import { ReactComponent as StarIcon } from "assets/images/icons/star.svg";
