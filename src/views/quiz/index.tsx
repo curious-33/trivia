@@ -46,7 +46,7 @@ const QuizView = () => {
             {get(currentQuiz, "category")}
           </Typography.Heading>
           <Typography.Text className={styles.quizLevel}>
-            level {get(currentQuiz, "difficulty")} {{ name: "ali" }}
+            level {get(currentQuiz, "difficulty")}
           </Typography.Text>
           <ProgressBar total={quizState} done={quizResult} />
           <div className={styles.quizForm}>
