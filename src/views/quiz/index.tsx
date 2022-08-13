@@ -15,6 +15,7 @@ const QuizView = () => {
   const navigate = useNavigate();
 
   const quizState = useSelector<IAppState>((state) => state.quiz.data);
+  const quizResult = useSelector<IAppState>((state) => state.quiz.result);
   const quizzes = Array.isArray(quizState) ? quizState : [];
   const currentQuiz = quizzes.find((quiz) => quiz.id === Number(id));
 
@@ -39,7 +40,7 @@ const QuizView = () => {
         <Typography.Text className={styles.quizLevel}>
           level {get(currentQuiz, "difficulty")}
         </Typography.Text>
-        <ProgressBar />
+        <ProgressBar total={quizState} done={quizResult} />
         <div className={styles.quizForm}>
           <Typography.Heading type="h4" className={styles.quizQuestion}>
             {get(currentQuiz, "question")}

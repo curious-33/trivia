@@ -1,6 +1,8 @@
 .appContainer {
   width: 100%;
+  height: 100%;
   height: 100vh;
+  overflow-y: hidden;
 }
 
 .lightTheme {
@@ -13,6 +15,7 @@
     z-index: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background: url("../../assets/images/light-theme-bg.svg");
@@ -24,6 +27,7 @@
 .darkTheme {
   background-color: var(--bg-primary);
   position: relative;
+  overflow-y: auto;
 
   &:before {
     content: "";
@@ -39,11 +43,30 @@
 }
 
 .pageContainer {
+  height: 100%;
+  overflow-y: auto;
   width: 50%;
   margin: 0 auto;
   position: absolute;
-  z-index: 1;
   left: 0;
-  right: 0;
   top: 0;
+  right: 0;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: var(--bg-secondary);
+    box-shadow: inset 0 0 10px var(--bg-form);
+    border-left: 1.5px solid var(--bg-secondary);
+    border-right: 1.5px solid var(--bg-secondary);
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: white;
+  }
 }
