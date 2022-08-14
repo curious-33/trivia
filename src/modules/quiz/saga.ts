@@ -1,8 +1,9 @@
 import { put, takeLatest, call } from "redux-saga/effects";
 import get from "lodash/get";
 
-import { IStore } from "./types";
+import { IStore, IApi } from "./types";
 import { startQuiz } from "./actions";
+import * as Helpers from "./helper";
 import * as API from "./api";
 
 export function* startQuizGenerator({
@@ -16,13 +17,8 @@ export function* startQuizGenerator({
       params: values,
     });
 
-    const result = get(data, "results", []);
-    const quizzes =
-      Array.isArray(result) &&
-      result.map((quiz, index) => ({
-        ...quiz,
-        id: index + 1,
-      }));
+    const result: IApi.StartQuiz.Response = get(data, "results", []);
+    const quizzes = Helpers.addId(result);
 
     yield put(startQuiz.success(quizzes));
     localStorage.setItem("quizzes", JSON.stringify(quizzes));

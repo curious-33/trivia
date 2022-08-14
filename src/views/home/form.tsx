@@ -1,14 +1,10 @@
 import { FormHandler } from "modules/quiz";
+
+import { Helpers } from "modules/quiz";
 import { Label, Button, Space, Fields } from "components";
 import { ReactComponent as CupIcon } from "assets/images/icons/cup.svg";
 import { ReactComponent as StarIcon } from "assets/images/icons/star.svg";
 import styles from "./home.module.scss";
-
-const difficulty = [
-  { value: 1, label: "Easy" },
-  { value: 2, label: "Medium" },
-  { value: 3, label: "Hard" },
-];
 
 const HomeForm = () => {
   return (
@@ -26,7 +22,7 @@ const HomeForm = () => {
             >
               <Fields.Select
                 name="difficulty"
-                options={difficulty}
+                options={Helpers.difficulty}
                 placeholder="Select a difficulty"
                 onChange={(value: string) =>
                   setValue({ name: "difficulty", value })

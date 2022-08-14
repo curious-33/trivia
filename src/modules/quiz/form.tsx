@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { helpers } from "utils";
 import { startQuiz } from "./actions";
 import validateForm from "./validation";
 import * as Types from "./types";
+import * as Helpers from "./helper";
 
 const FormModule: React.FC<Types.IForm.Handler> = ({ children }) => {
   const dispatch = useDispatch();
@@ -42,7 +42,7 @@ const FormModule: React.FC<Types.IForm.Handler> = ({ children }) => {
             type: "boolean",
             category: 15,
             amount: values.amount,
-            difficulty: helpers.getQuizDifficulty(
+            difficulty: Helpers.getQuizDifficulty(
               values.difficulty ? values.difficulty : ""
             ),
           },

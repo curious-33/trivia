@@ -81,3 +81,10 @@ export namespace IStore {
     cb: generalTypes.ICallback;
   }
 }
+
+export namespace IHelper {
+  export interface Difficulty {
+    value: string;
+    label: string;
+  }
+}
