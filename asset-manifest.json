@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/trivia/static/css/main.253c092b.css",
-    "main.js": "/trivia/static/js/main.dc2556aa.js",
-    "static/css/692.2038adf8.chunk.css": "/trivia/static/css/692.2038adf8.chunk.css",
+    "main.css": "/trivia/static/css/main.65f1a33f.css",
+    "main.js": "/trivia/static/js/main.b234da4e.js",
+    "static/css/692.4d84d610.chunk.css": "/trivia/static/css/692.4d84d610.chunk.css",
     "static/js/692.ff023d62.chunk.js": "/trivia/static/js/692.ff023d62.chunk.js",
-    "static/css/925.12497b5a.chunk.css": "/trivia/static/css/925.12497b5a.chunk.css",
+    "static/css/925.5d9d86fa.chunk.css": "/trivia/static/css/925.5d9d86fa.chunk.css",
     "static/js/925.a1e4c791.chunk.js": "/trivia/static/js/925.a1e4c791.chunk.js",
     "static/css/769.e35d3f9a.chunk.css": "/trivia/static/css/769.e35d3f9a.chunk.css",
     "static/js/769.fdbd20a1.chunk.js": "/trivia/static/js/769.fdbd20a1.chunk.js",
@@ -31,7 +31,7 @@
     "static/media/star1.svg": "/trivia/static/media/star1.2253076d47348125434f8c897c168e6c.svg"
   },
   "entrypoints": [
-    "static/css/main.253c092b.css",
-    "static/js/main.dc2556aa.js"
+    "static/css/main.65f1a33f.css",
+    "static/js/main.b234da4e.js"
   ]
 }
