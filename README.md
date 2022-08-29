@@ -2,6 +2,13 @@
 
 The project's done for test task and available to fork and change. In this repo, I've used [opentdb.com](https://opentdb.com/) api in order to supply information.
 
+## Requirements
+
+Nodejs: higher than(or equal) v12
+NPM: higher than(or equal) v6
+
+Why are these requirements?
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -14,10 +21,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser
 ### yarn run deploy
 
 Deploys to the gh-pages automatically. In the package.json, there is a hompage key that you should update it according to the information about your repo. Make sure whether gh-pages is selected or not in your settings of a repo
-
-## Requirements
-
-In this repo,  I had to use React, Redux and Typescript technologies in order to implement the task. Yeap, there were some unclear cases on the design that is not described in the requirement. In the opentdb, several parameters are required to get data, however, these fields are not given(such as: category field). First, I was going to add it myself, but then, I just paid more attention to the development process.
 
 ## Support
 

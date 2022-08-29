@@ -26,6 +26,7 @@ const AmountComponent: React.FC<IAmountComponent> = ({
         placeholder={placeholder}
         className={cx("amount", errors && errors[name] ? "hasError" : "")}
         value={amountValue}
+        min={1}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           setAmountValue(e.target.value);
           if (onChange) {
