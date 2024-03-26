@@ -12,16 +12,12 @@ This app was a test task in the interview, so I didn't spend too much time on it
 
 #### Nodejs: higher than(or equal) v12
 
-```
-It might occur some unexpected issues with older version of nodejs.Please, make sure to upgrade your environment, if your nodejs version is older
-```
+>It might occur some unexpected issues with older version of nodejs.Please, make sure to upgrade your environment, if your nodejs version is older
 
 #### Add .env file
 
 To run the project successfully, you need to add env variable to interact with database. Database is free and open source project: [opentdb.com](https://opentdb.com)
->REACT_APP_API_BASE_URL=https://opentdb.com 
-
-<br/>
+```REACT_APP_API_BASE_URL=https://opentdb.com``` 
 
 ### Available Scripts
 
