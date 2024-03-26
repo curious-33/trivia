@@ -6,7 +6,7 @@
 
 ## Trivia - a simple quiz app
 
-This app was a test task in the interview, so I didn't spend too much time on it. You can check the app [here](https://curious-33.github.io/quizzes)
+This app was a test task in the interview, so I didn't spend too much time on it. You can check the app [here](https://curious-33.github.io/trivia)
 
 ### Requirements:
 
