@@ -17,7 +17,9 @@ This app was a test task in the interview, so I didn't spend too much time on it
 #### Add .env file
 
 To run the project successfully, you need to add env variable to interact with database. Database is free and open source project: [opentdb.com](https://opentdb.com)
-```REACT_APP_API_BASE_URL=https://opentdb.com``` 
+```
+REACT_APP_API_BASE_URL=https://opentdb.com
+``` 
 
 ### Available Scripts
 
