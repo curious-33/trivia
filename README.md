@@ -1,48 +1,37 @@
-[Contributors][contributors-url]
-[Forks][forks-url]
-[Stargazers][stars-url]
-[Issues][issues-url]
-[Twitter][twitter-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![Twitter][twitter-shield]][twitter-url]
 
-# Trivia
+## Trivia - a simple quiz app
 
-Project was a test task and available to fork and change.
+This app was a test task in the interview, so I didn't spend too much time on it. You can check the app [here](https://curious-33.github.io/quizzes)
 
-![1661784330077](image/README/1661784330077.png)
+### Requirements:
 
-## Requirements
-
-Nodejs: higher than(or equal) v12
-NPM: higher than(or equal) v6
+#### Nodejs: higher than(or equal) v12
 
 ```
-Why are these requirements?
-
-There is a problem with old nodejs and npm environment. In this project, the React version is 18.2.0. Please make sure to upgrade your environment. If you don't want to upgrade your environment, you can run
-
- npm install --legacy-peer-deps (or yarn --legacy-peer-deps)
+It might occur some unexpected issues with older version of nodejs.Please, make sure to upgrade your environment, if your nodejs version is older
 ```
 
-## Available Scripts
+#### Add .env file
 
-In the project directory, you can run:
+To run the project successfully, you need to add env variable to interact with database. Database is free and open source project: [opentdb.com](https://opentdb.com)
+>REACT_APP_API_BASE_URL=https://opentdb.com 
 
-### `yarn start`
+<br/>
 
+### Available Scripts
+
+#### `yarn start`
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser
 
-### yarn run deploy
+#### `yarn run deploy`
 
-Deploys to the gh-pages automatically. In the package.json, there is a hompage key that you have to update it according to your own repo details. Plus, make sure whether gh-pages is selected or not in your settings of a repo
-
-## Note
-
-In env file, you can see base url and if you want to change it, you can directly change the url, however, make sure to terminate current localhost and run "npm start" (or yarn start). If the base url is undefined, it will throw error on the console.
-
-<!-- MARKDOWN LINKS & IMAGES -->
-
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+Deploys the app to the gh-pages automatically.
 
 [contributors-shield]: https://img.shields.io/github/contributors/curious-33/trivia
 [contributors-url]: https://github.com/curious-33/trivia/graphs/contributors
@@ -52,5 +41,5 @@ In env file, you can see base url and if you want to change it, you can directly
 [stars-url]: https://github.com/curious-33/trivia/stargazers
 [issues-shield]: https://img.shields.io/github/issues/curious-33/trivia
 [issues-url]: https://github.com/curious-33/trivia/issues
-[twitter-shield]: https://img.shields.io/twitter/follow/curious_333?logoColor=blue&style=social
-[twitter-url]: https://twitter.com/curious_333
+[twitter-shield]: https://img.shields.io/twitter/follow/imcurious_33?logoColor=blue&style=social
+[twitter-url]: https://twitter.com/imcurious_33
